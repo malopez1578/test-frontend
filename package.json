@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/malopez1578/test-frontend/issues"
   },
-  "homepage": "https://github.com/malopez1578/test-frontend#readme",
+  "homepage": "https://malopez1578.github.io/test-frontend/",
   "dependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
