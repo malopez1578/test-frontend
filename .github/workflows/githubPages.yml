@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: 14
     - name: Install NPM packages
-      run: npm ci
+      run: npm install --no-optional --no-shrinkwrap --no-package-lock
     - name: Build project
       run: npm run build
     - name: Run tests
