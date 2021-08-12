@@ -4,5 +4,7 @@ import { defineConfig } from 'vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [reactRefresh()],
-  jsxInject: `import React from 'react'`,
+  esbuild: {
+    jsxInject: `import React from 'react'`
+  }
 })
