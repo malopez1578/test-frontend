@@ -18,9 +18,9 @@ function App() {
 
   return (
     <div className={app.main}>
+      <Header />
       <Suspense fallback={<span>loading..</span>}>
         <Router history={newHistory}>
-          <Header />
           <Routes />
         </Router>
       </Suspense>

@@ -8,10 +8,12 @@ const clientId =
 const Login = () => {
   const { userProfile } = useSelector((state) => state.getUserReducer)
   const dispatch = useDispatch()
+
   const onLogin = (res) => {
     dispatch(setUserProfile(res))
     refreshTokenSetup(res)
   }
+
   const onLogout = (res) => {
     dispatch(setUserProfile(res))
   }

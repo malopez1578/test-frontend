@@ -1,1 +1,2 @@
-export * from './Nav/Nav';
+export * from './ModalComments/ModalCommments'
+export * from './Nav/Nav'

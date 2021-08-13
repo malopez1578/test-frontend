@@ -37,3 +37,16 @@
 .c-card_text {
   height: 3.5rem;
 }
+
+.c-card_content {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.c-card_like {
+  min-width: 1.1rem;
+  display: grid;
+  grid-template-columns: 17px 1fr;
+  gap: 5px;
+}

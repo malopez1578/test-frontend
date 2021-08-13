@@ -1,0 +1,60 @@
+.c-overlay {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  background-color: rgb(0 0 0 / 71%);
+  backdrop-filter: blur(5px);
+}
+
+.c-overlay[class*='is-active'] {
+  display: flex;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.c-overlay[class*='is-active'] .c-modal {
+  display: block;
+  animation: fadeInDown 0.5s ease-in-out forwards;
+}
+
+.c-modal {
+  width: 95%;
+  display: none;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 14px;
+  max-height: 90vh;
+  min-height: 400px;
+  padding: 0.5rem;
+  box-shadow: 2px 4px 4px 3px #888282;
+}
+
+.c-closeModal {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -1,7 +1,12 @@
 import { combineReducers } from '@reduxjs/toolkit'
+import { getCommentsByIdReducer } from './getCommentsById'
 import { getPostsReducer } from './getPosts'
 import { getUserReducer, setUserProfile } from './getUser'
 
-export { getPostsReducer, getUserReducer, setUserProfile }
+export { setUserProfile }
 
-export const reducers = combineReducers({ getPostsReducer, getUserReducer })
+export const reducers = combineReducers({
+  getPostsReducer,
+  getUserReducer,
+  getCommentsByIdReducer,
+})
