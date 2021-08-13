@@ -1,9 +1,13 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import app from './App.module.css';
-import { Header } from './components';
-import { getPosts } from "./core/services/posts.service";
-import { Home } from './pages/Home/Home';
+import { createBrowserHistory } from 'history'
+import { Suspense, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { Router } from 'react-router-dom'
+import app from './App.module.css'
+import { Header } from './components'
+import { getPosts } from './core/services/posts.service'
+import { Routes } from './Router/Routes'
+
+const newHistory = createBrowserHistory()
 
 function App() {
   const dispatch = useDispatch()
@@ -12,11 +16,14 @@ function App() {
     dispatch(getPosts())
   }, [])
 
-
   return (
     <div className={app.main}>
-        <Header />
-        <Home></Home>
+      <Suspense fallback={<span>loading..</span>}>
+        <Router history={newHistory}>
+          <Header />
+          <Routes />
+        </Router>
+      </Suspense>
     </div>
   )
 }
