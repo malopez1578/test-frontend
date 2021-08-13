@@ -4,7 +4,6 @@ import home from './Home.module.css'
 
 const Home = () => {
   const { listPosts } = useSelector((state) => state.getPostsReducer)
-  console.log('🚀 ~ file: Home.jsx ~ line 5 ~ Home ~ listPosts', listPosts)
   return (
     <main className={home['c-main']}>
       {listPosts &&

@@ -5,7 +5,11 @@ const User = ({ image, text }) => {
     <div className={user['c-user']}>
       <p className={user['c-user_text']}>{text}</p>
       <figure className={user['c-figure']}>
-        <img className={user['c-image']} src={image} alt="imagen de perfil" />
+        <img
+          className={user['c-image']}
+          src={image || 'https://via.placeholder.com/150'}
+          alt="imagen de perfil"
+        />
       </figure>
     </div>
   )

@@ -7,7 +7,7 @@ const getUser = createSlice({
   },
   reducers: {
     setUserProfile(state, { payload }) {
-      state.userProfile = payload.profileObj
+      state.userProfile = payload?.profileObj || {}
     },
   },
 })
