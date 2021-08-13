@@ -1,3 +1,4 @@
+import { Button } from '../Button/Button'
 import { User } from '../User/User'
 import card from './Card.module.css'
 
@@ -16,6 +17,7 @@ const Card = ({ image, tags, text, owner, likes }) => {
         <div className={card['c-card_text']}>
           <p>{text}</p>
         </div>
+        <Button label="ver mas" />
       </div>
       <div className={card['c-card_tags']}>
         {tags && tags.map((tag, idx) => <span key={idx}>{tag}</span>)}

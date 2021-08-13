@@ -1,0 +1,12 @@
+.c-btn {
+  border: none;
+  background-color: var(--color_primary);
+  color: var(--color_primary_text);
+  padding: 5px 8px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.c-btn:hover {
+  background-color: var(--color_secondary);
+  color: var(--color_secondary_text);
+}

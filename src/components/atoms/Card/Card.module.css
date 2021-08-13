@@ -30,13 +30,10 @@
   min-width: 3.5rem;
   text-align: center;
   margin: 0 0.2rem;
-  cursor: pointer;
+  border-radius: 10px;
   transition: background 0.5s ease-in-out;
 }
-.c-card_tags span:hover {
-  background-color: var(--color_secondary);
-  color: var(--color_secondary_text);
-}
+
 .c-card_text {
   height: 3.5rem;
 }

@@ -1,5 +1,11 @@
 .c-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 30em) {
+  .c-nav p {
+    display: none;
+  }
 }
