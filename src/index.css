@@ -1,3 +1,17 @@
+:root{
+  --color_primary_dark: #4a0072;
+  --color_primary: #7b1fa2;
+  --color_primary_light: #ae52d4;
+  --color_primary_text: #fff;
+  
+  --color_secondary_dark: #560027;
+  --color_secondary: #880e4f;
+  --color_secondary_light: #bc477b;
+  --color_secondary_text: #fff;
+  --color_text: #1b1b1b;
+  --text_size: 16px
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +21,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: var(--text_size);
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+h6 {
+  font-size: 1.5rem;
 }

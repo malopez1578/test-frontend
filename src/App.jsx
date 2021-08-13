@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import './App.css';
+import app from './App.module.css';
+import { Header } from './components';
 import { getPosts } from "./core/services/posts.service";
+import { Home } from './pages/Home/Home';
 
 function App() {
   const dispatch = useDispatch()
@@ -12,8 +14,9 @@ function App() {
 
 
   return (
-    <div className="App">
-        <p>HMR updates</p>
+    <div className={app.main}>
+        <Header />
+        <Home></Home>
     </div>
   )
 }

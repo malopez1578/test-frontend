@@ -3,10 +3,12 @@ import { getPosts } from '../../services/posts.service'
 
 const getPostsSlice = createSlice({
   name: 'getPosts',
-  initialState:{},
+  initialState:{
+    listPosts: []
+  },
   extraReducers: {
       [getPosts.fulfilled]:(state, {payload}) => {
-        console.log("🚀 ~ file: getPosts.js ~ line 9 ~ fulfilled", payload)
+        state.listPosts.push(...payload)
       },
       [getPosts.rejected]:(state, {payload}) => {
         console.log("🚀 ~ file: getPosts.js ~ line 9 ~ rejected", payload)

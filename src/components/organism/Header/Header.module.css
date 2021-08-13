@@ -1,0 +1,13 @@
+.c-header {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    background-color: var(--color_primary_dark);
+    color: var(--color_primary_text);
+    padding: 0 .5rem;
+}
+
+.c-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

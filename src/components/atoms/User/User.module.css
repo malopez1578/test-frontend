@@ -1,0 +1,24 @@
+.c-figure {
+  margin: 0 3px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.c-image {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.c-user {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  margin: 0 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.c-user_text {
+  text-align: right;
+}
