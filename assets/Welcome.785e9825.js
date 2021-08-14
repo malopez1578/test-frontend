@@ -1,0 +1,1 @@
+import{R as e}from"./vendor.a00c3701.js";import{L as a}from"./index.efc3b67d.js";var l="_c-welcome_1ll1j_1";const r=()=>e.createElement("div",{className:l},e.createElement(a,null));export{r as default};
