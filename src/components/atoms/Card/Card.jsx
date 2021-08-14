@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { getCommentsById } from '../../../core/services/posts.service'
+import { getUserById } from '../../../core/services/users.service'
 import { ButtonModal } from '../ButtonModal/ButonModal'
 import { User } from '../User/User'
 import card from './Card.module.css'
@@ -8,8 +9,11 @@ const Card = ({ image, tags, text, owner, likes, id }) => {
   const completeName = `${owner.firstName} ${owner.lastName}`
   const dispatch = useDispatch()
 
-  const handleClick = (idPost) => {
+  const handleComments = (idPost) => {
     dispatch(getCommentsById(idPost))
+  }
+  const handleProfile = (idProfile) => {
+    dispatch(getUserById(idProfile))
   }
 
   return (
@@ -29,7 +33,12 @@ const Card = ({ image, tags, text, owner, likes, id }) => {
           <ButtonModal
             idModal="modal_content"
             label="Ver comentarios"
-            click={() => handleClick(id)}
+            click={() => handleComments(id)}
+          />
+          <ButtonModal
+            idModal="modal_profile"
+            label="Ver perfil"
+            click={() => handleProfile(owner.id)}
           />
           <div className={card['c-card_like']}>
             <img src="./assets/images/like.svg" alt="logo de like" />
